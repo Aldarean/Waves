@@ -6,7 +6,7 @@ const brandSchema = mongoose.Schema({
         required: true,
         type: String,
         unique: true,
-        maxlength: 100
+        maxlength: 100 
     }
 });
 

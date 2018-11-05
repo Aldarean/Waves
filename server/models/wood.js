@@ -8,7 +8,7 @@ const woodSchema = mongoose.Schema({
         maxlength: 100
     }
 });
-
+ 
 
 const Wood = mongoose.model('Wood', woodSchema);
 
