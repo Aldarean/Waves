@@ -5,10 +5,16 @@ const cookieParser = require('cookie-parser');
 
 const app = express();
 const mongoose = require('mongoose');
+
+const config = {
+    autoIndex: false,
+    useNewUrlParser: true,
+  };
+
 require('dotenv').config();
 
 mongoose.Promise = global.Promise; 
-mongoose.connect(process.env.DATABASE);
+mongoose.connect(process.env.DATABASE, config);
 
 app.use(bodyParser.urlencoded({ extended: true}));
 app.use(bodyParser.json());
